@@ -3,7 +3,8 @@
 echo "Welcome to Employee Wage Computation "
 
 random=$((RANDOM%2))
-FULL_DAY_HOUR=8
+FULL_DAY_WORKING_HOUR=8
+HALF_DAY_WORKING_HOUR=4
 WAGE_PER_HOUR=20
 
 if [ $random -eq 0 ]
