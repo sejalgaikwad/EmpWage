@@ -4,9 +4,11 @@ echo "Welcome to Employee Wage Computation "
 
 randomPresent=$((RANDOM%2))
 randomTime=$((RANDOM%2))
+
 FULL_DAY_WORKING_HOUR=8
 HALF_DAY_WORKING_HOUR=4
 WAGE_PER_HOUR=20
+NUM_WORKING_DAYS=20
 
 function getWorkingHour(){
 	case $randomTime in 
@@ -21,8 +23,10 @@ then
 	echo "Employee is Absent"
 else
 	echo "Employee is Present"
-	workingHour=$(getWorkingHour )
+	workingHour=$( getWorkingHour )
         dailyWage=$(($workingHour*$WAGE_PER_HOUR))
-	echo "Daily Wage:-" $dailyWage
+	     monthlyWage=$(($NUM_WORKING_DAYS*dailyWage))
+			echo " Monthly Wage:- " $monthlyWage
+         echo "Daily Wage:-" $dailyWage
 fi
 
