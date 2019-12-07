@@ -35,7 +35,12 @@ do
 			echo "Daily Wage of Employee :- " $dailyWage
 		fi
 		days=$(($days+1))
-		totalEmpHrs=$(( $totalEmpHrs + $workingHour ))
+		totalEmpHrs=$(($totalEmpHrs+$workingHour))
+		dailyWage[$days]=$dailyWage
+		totalWage=$(($totalWage+$dailyWage))
+		totalWages[$days]=$totalWage
 	done
 done
-
+echo ${dailyWage[@]}
+echo ${totalWages[@]}
+echo ${totalWage}
