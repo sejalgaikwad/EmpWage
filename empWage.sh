@@ -24,9 +24,8 @@ then
 else
 	echo "Employee is Present"
 	workingHour=$( getWorkingHour )
-        dailyWage=$(($workingHour*$WAGE_PER_HOUR))
-	     monthlyWage=$(($NUM_WORKING_DAYS*dailyWage))
+		dailyWage=$(($workingHour*$WAGE_PER_HOUR))
+	   monthlyWage=$(($NUM_WORKING_DAYS*dailyWage))
 			echo " Monthly Wage:- " $monthlyWage
-         echo "Daily Wage:-" $dailyWage
 fi
 
